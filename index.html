@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery.dropdown.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="scripts.js"></script>
+	<script src="jquery.dropdown.js"></script>
+</head>
+<body>
+	<div id="select"></div>
+
+	<script type="text/javascript">
+	$(function(){
+
+		var select = $('#select');
+
+	           var options = {
+	                name: "select",
+	                menu: [
+	                	{ID: 1, Label: "Label first", active: false},
+	                	{ID: 2, Label: "Label second", active: true},
+	                	{ID: 3, Label: "Label third", active: false},
+	                	{ID: 4, Label: "Label fourth", active: false}
+	                ]
+	           };
+
+	           select.select(options);
+	});
+	</script>
+</body>
+</html>
