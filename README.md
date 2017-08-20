@@ -1,6 +1,7 @@
 # Dropdown
 
-Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its own**
+Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its own**.
+Must be used with jquery.
 
 ## Installation
 
@@ -15,7 +16,7 @@ Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its 
 
 ## Documentation
 
-You can start Dropdown mannually if you need to:
+You can start Dropdown manually:
 ```
 <div id="my-simple-dropdown"></div>
 ```
@@ -35,5 +36,18 @@ $(function(){
 	});           
 
 	dropdown.select(options);
+});
+```
+
+Selectin icinde default text ashagidaki qaydada yerleshdirilir:
+**firstOption** is a default option for dropdown
+```
+dropdown.select({
+	**firstOption: 'Все карты',**
+	menu: [
+		{ID: 1, Label: "Label first", active: false},
+		{ID: 2, Label: "Label second", active: false},
+		{ID: 3, Label: "Label third", active: false}
+	]	
 });
 ```
