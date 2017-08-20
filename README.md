@@ -14,3 +14,12 @@ Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its 
 ```
 
 ## Documentation
+
+You can start Dropdown mannually if you need to:
+```
+<div class="select"></div>
+```
+For the frame of **dropdown** we use the **div**.
+```
+### Options
+```
