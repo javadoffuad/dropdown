@@ -17,11 +17,25 @@ Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its 
 
 You can start Dropdown mannually if you need to:
 ```
-<div class="select"></div>
+<div id="my-simple-dropdown"></div>
 ```
 For the frame of **dropdown** we use the **div**.
 
 ### Options
 ```
+$(function(){
+	var dropdown = $(".my-simple-dropdown");
 
+           var options = {
+                name: "my-select",
+                menu: [
+                	{ID: 1, Label: "Label first", active: false},
+                	{ID: 2, Label: "Label second", active: true},
+                	{ID: 3, Label: "Label third", active: false},
+                	{ID: 4, Label: "Label fourth", active: false}
+                ]
+           };
+
+           dropdown.select(options);
+});
 ```
