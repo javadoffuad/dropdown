@@ -34,6 +34,6 @@ $(function(){
                	]	
 	});           
 
-           dropdown.select(options);
+	dropdown.select(options);
 });
 ```
