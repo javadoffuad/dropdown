@@ -39,11 +39,10 @@ $(function(){
 });
 ```
 
-Selectin icinde default text ashagidaki qaydada yerleshdirilir:
-**firstOption** is a default option for dropdown
+**firstOption** is a default option for dropdown:
 ```
 dropdown.select({
-	**firstOption: 'Все карты',**
+	firstOption: 'Все карты',
 	menu: [
 		{ID: 1, Label: "Label first", active: false},
 		{ID: 2, Label: "Label second", active: false},
