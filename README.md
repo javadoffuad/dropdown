@@ -29,9 +29,9 @@ $(function(){
 
 	dropdown.select({
 		menu: [
-			{ID: 1, Label: "Label first", active: false},
-			{ID: 2, Label: "Label second", active: true},
-			{ID: 3, Label: "Label third", active: false}
+			{ID: 1, Label: "Salary card", active: false},
+			{ID: 2, Label: "Debit card Visa", active: true},
+			{ID: 3, Label: "Debit card MasterCard", active: false}
                	]	
 	});           
 
@@ -42,11 +42,11 @@ $(function(){
 **firstOption** is a default option for dropdown:
 ```
 dropdown.select({
-	firstOption: 'Все карты',
+	firstOption: 'All cards',
 	menu: [
-		{ID: 1, Label: "Label first", active: false},
-		{ID: 2, Label: "Label second", active: false},
-		{ID: 3, Label: "Label third", active: false}
+		{ID: 1, Label: "Salary card", active: false},
+		{ID: 2, Label: "Debit card Visa", active: false},
+		{ID: 3, Label: "Debit card MasterCard", active: false}
 	]	
 });
 ```
