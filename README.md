@@ -1,7 +1,5 @@
-# dropdown select
+# Dropdown
 
-Пакет позволяет работать с данными, получаемыми при вызове PHP интерпретатора из 
-командной строки. Он так же реализует маршрутизацию на основе опций вызовов 
-командной строки.
+Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its own**
 
-## Установка и Автозагрузка
+## Documentation
