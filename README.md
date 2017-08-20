@@ -24,7 +24,7 @@ For the frame of **dropdown** we use the **div**.
 ### Options
 ```
 $(function(){
-	var dropdown = $(".my-simple-dropdown");
+	var dropdown = $("#my-simple-dropdown");
 
 	dropdown.select({
 		menu: [
