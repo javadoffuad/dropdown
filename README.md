@@ -4,7 +4,7 @@ Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its 
 
 ## Installation
 
-Via /<script/> tag
+**Via `<script>` tag**
 ```
 <link rel="stylesheet" href="./jquery.dropdown.css">
 
