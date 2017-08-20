@@ -28,9 +28,9 @@ $(function(){
 
 	dropdown.select({
 		menu: [
-	                	{ID: 1, Label: "Label first", active: false},
-	                	{ID: 2, Label: "Label second", active: true},
-	                	{ID: 3, Label: "Label third", active: false}
+			{ID: 1, Label: "Label first", active: false},
+			{ID: 2, Label: "Label second", active: true},
+			{ID: 3, Label: "Label third", active: false}
                	]	
 	});           
 
