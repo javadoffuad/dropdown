@@ -26,15 +26,13 @@ For the frame of **dropdown** we use the **div**.
 $(function(){
 	var dropdown = $(".my-simple-dropdown");
 
-           var options = {
-                name: "my-select",
-                menu: [
-                	{ID: 1, Label: "Label first", active: false},
-                	{ID: 2, Label: "Label second", active: true},
-                	{ID: 3, Label: "Label third", active: false},
-                	{ID: 4, Label: "Label fourth", active: false}
-                ]
-           };
+	dropdown.select({
+		menu: [
+	                	{ID: 1, Label: "Label first", active: false},
+	                	{ID: 2, Label: "Label second", active: true},
+	                	{ID: 3, Label: "Label third", active: false}
+               	]	
+	});           
 
            dropdown.select(options);
 });
