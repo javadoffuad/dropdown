@@ -1,76 +1,83 @@
 (function($) {
     $.fn.select = function(options) {
-        var container = this.addClass('pane select-t');
+            var container = this.addClass('pane select-t');
+                
+            var dropdown;
+            var input = $('<input>');
+            var placeholder = $('<div>');
             
-        var dropdown;
-        var input = $('<input>');
-        var placeholder = $('<div>');
+            var firstOption = {
+                ID: 0,
+                Label: options.firstOption || 'Select'
+            };
         
-        var firstOption = {
-            ID: 0,
-            Label: options.firstOption || 'Select'
-        };
-        
-        var settings = $.extend( {
-            'className': 'select__value',
-            'dropdownHeight': 300,
-            'name': 'select__value'
-        }, options);
-        
-        var active = {
-            ID: firstOption.ID,
-            Label: firstOption.Label
-        };
+            var settings = $.extend( {
+                'className': 'select__value',
+                'dropdownHeight': 300,
+                'name': 'select__value'
+            }, options);
+            
+            var active = {
+                ID: firstOption.ID,
+                Label: firstOption.Label
+            };
 
-        // Create select__button
-        (function() {
-            placeholder.addClass('placeholder')
-                    .text(active.Label)
-                    .appendTo(container);
-            
-            input.attr({
-                        type:   'hidden',
-                        value:  active.ID,
-                        name:   settings.name,
-                        class:  options.className
-                    })
-                    .appendTo(container);
-            
-            container.wrapInner( $('<div>').addClass('pane select__button') );
-            
-            if(options.menu && !dropdown){
-                if( isFunction( options.actionBeforeClick ) ){
-                    options.actionBeforeClick();
-                }
-                createDropdown( options.actionAfterClick );
-            }
-        })();
-        
-        function open(callback) {
-            if( isFunction(callback) ){
-                callback();
-            }
-            checkHeight();
-            checkItem();
-            container.addClass('open');
-        }
-        
-        //-edit
-        function checkHeight() {
-            var size = dropdown.find('.select__item').length;
-            var height = size*50;
-            
-            if( settings.dropdownHeight > height ){
-                dropdown.css('height', height+3);
-            }
-        }
-        
-        function checkItem() {
+            // Create select__button
             (function() {
-                dropdown.find('.select__item:not([data-id=' + active.ID + '])').removeClass('is-active')
-                dropdown.find('[data-id=' + active.ID + ']').addClass('is-active');
+                placeholder.addClass('placeholder')
+                        .text(active.Label)
+                        .appendTo(container);
+                
+                input.attr({
+                            type:   'hidden',
+                            value:  active.ID,
+                            name:   settings.name,
+                            class:  options.className
+                        })
+                        .appendTo(container);
+                
+                container.wrapInner( $('<div>').addClass('pane select__button') );
+                
+                if(options.menu && !dropdown){
+                    if( isFunction( options.actionBeforeClick ) ){
+                        options.actionBeforeClick();
+                    }
+                    createDropdown( options.actionAfterClick );
+                }
             })();
-        }
+        
+            function open(callback) {
+                if( isFunction(callback) ){
+                    callback();
+                }
+
+                if(scrollExists()){
+                    dropdown.attr('data-simplebar-direction', 'vertical');
+                }
+                else{
+                    dropdown.css('height', settings.dropdownHeight);
+                }
+                checkItem();
+                container.addClass('open');
+            }
+
+            function scrollExists(){
+                var item    = dropdown.find('.select__item');
+                var height  = item.length * item.height();
+
+                if( settings.dropdownHeight > height ){
+                    settings.dropdownHeight = height;
+                    return false;
+                }
+                return true;
+            }
+        
+            function checkItem() {
+                (function() {
+                    dropdown.find('.select__item:not([data-id=' + active.ID + '])').removeClass('is-active')
+                    dropdown.find('[data-id=' + active.ID + ']').addClass('is-active');
+                })();
+            }
 
         // Create dropDown
         function createDropdown(callback) {
