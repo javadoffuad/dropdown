@@ -1,6 +1,6 @@
 (function($) {
     $.fn.select = function(options) {
-            var container = this.addClass('pane select-t');
+            var container = this.addClass('pane select');
                 
             var dropdown;
             var input = $('<input>');
@@ -46,7 +46,7 @@
                 }
             })();
         
-            function open(callback) {
+           function open(callback) {
                 if( isFunction(callback) ){
                     callback();
                 }
@@ -59,7 +59,7 @@
                 }
                 checkItem();
                 container.addClass('open');
-            }
+           }
 
             function scrollExists(){
                 var item    = dropdown.find('.select__item');

@@ -3,7 +3,7 @@ function isFunction(callback){
 }
 
 $(window).click(function(e) {
-    if(!$(e.target).closest('.select-t').length && $('.select-t.open').length){
-        $('.select-t').removeClass('open');
+    if(!$(e.target).closest('.select').length && $('.select.open').length){
+        $('.select').removeClass('open');
     }
 });
