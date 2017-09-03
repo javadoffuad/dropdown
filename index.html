@@ -4,30 +4,49 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="jquery.dropdown.css">
+	<style type="text/css">
+	body{
+		margin:100px;
+	}
+	h1{
+		font-family: 'Nunito', sans-serif;
+		margin-bottom: 60px;
+	}
+	.wrapper{
+		width: 100%;
+		max-width: 330px;
+		margin: auto;
+	}
+	</style>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>
 	<script src="jquery.dropdown.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 <body>
-	<div id="select"></div>
+	<div class="wrapper">
+		<h1>Simple dropdown</h1>
 
-	<script type="text/javascript">
-	$(function(){
-		var select = $('#select');
-
-	           var options = {
-	                name: "select",
-	                menu: [
-	                	{ID: 1, Label: "Label first", active: false},
-	                	{ID: 2, Label: "Label second", active: true},
-	                	{ID: 3, Label: "Label third", active: false},
-	                	{ID: 4, Label: "Label fourth", active: false}
-	                ]
-	           };
-
-	           select.select(options);
-	});
-	</script>
+		<div id="select"></div>
+	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+$(function(){
+	var select = $('#select');
+
+           var options = {
+                name: "select",
+                menu: [
+                	{ID: 1, Label: "Label first", active: false},
+                	{ID: 2, Label: "Label second", active: true},
+                	{ID: 3, Label: "Label third", active: false},
+                	{ID: 4, Label: "Label fourth", active: false}
+                ]
+           };
+
+           select.select(options);
+});
+</script>
