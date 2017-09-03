@@ -58,6 +58,7 @@
                     dropdown.css('height', settings.dropdownHeight);
                 }
                 checkItem();
+                $('.select').removeClass('open');
                 container.addClass('open');
            }
 
