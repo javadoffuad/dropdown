@@ -42,9 +42,7 @@
 
 <script type="text/javascript">
 $(function(){
-	var select = $('#select');
-
-           var options = {
+	$('#select').select({
                 name: "select",
                 menu: [
                 	{ID: 1, Label: "Label first", active: false},
@@ -52,21 +50,20 @@ $(function(){
                 	{ID: 3, Label: "Label third", active: false},
                 	{ID: 4, Label: "Label fourth", active: false}
                 ]
-           };
-           select.select(options);
+         });
 
-           $('#select2').select({
-           	name: "select-second",
-           	dropdownHeight: "225",
+	   $('#select2').select({
+		name: "select-second",
+		dropdownHeight: "225",
 		menu: [
-	                	{ID: 1, Label: "Label first", active: false},
-	                	{ID: 2, Label: "Label second", active: false},
-	                	{ID: 3, Label: "Label third", active: true},
-	                	{ID: 4, Label: "Label fourth", active: false},
-	                	{ID: 5, Label: "Label fifth", active: false},
-	                	{ID: 6, Label: "Label sixth", active: false},
-	                	{ID: 7, Label: "Label seveth", active: false}
-                	]
-           })
+				{ID: 1, Label: "Label first", active: false},
+				{ID: 2, Label: "Label second", active: false},
+				{ID: 3, Label: "Label third", active: true},
+				{ID: 4, Label: "Label fourth", active: false},
+				{ID: 5, Label: "Label fifth", active: false},
+				{ID: 6, Label: "Label sixth", active: false},
+				{ID: 7, Label: "Label seveth", active: false}
+			]
+	   });
 });
 </script>
