@@ -1,6 +1,6 @@
 # Dropdown
 
-## Demo https://javadoffuad.github.io/dropdown/
+[Demo](https://javadoffuad.github.io/dropdown/)
 
 Dropdown is a simple plugin. Dropdown **does not use a select (html), draws its own**.
 Must be used with jquery.
